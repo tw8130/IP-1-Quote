@@ -12,6 +12,8 @@ class="container">
   
           <div *ngIf='quote.showName'>
             <app-qoute-details  [quote]='qoute' (isComplete) = 'deleteEntry($event,i)'></app-qoute-details>
+            <button class="btn btn-success" (click)="upvote(i)">Upvote </button>
+            <button class="btn btn-success" (click)="downvote(i)">Downvote </button>
           </div>
         </div>
       </div>
