@@ -7,6 +7,10 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  togglePublisher(index: string | number){
+    this.quotes[index].showName=!this.quotes[index].showName;
+  }
+
   quotes=[
     new Quote (1,'MKL','Doug Conant','To win the marketplace you must first win the workplace'),
     new Quote (2,'Max','Richard Branson','Business opportunities are like buses there`s always another one coming'),

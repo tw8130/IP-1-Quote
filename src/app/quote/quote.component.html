@@ -1,1 +1,25 @@
-<p>quote works!</p>
+class="container">
+    <h1>My Diary</h1>
+    <hr>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor='let quote of qoutes ;let i = index'>
+          <div>
+            <h4 id={{i}} appHighlight>{{qoute.qoute}}</h4>
+            <button (click)='togglePublisher(i)' class="btn btn-primary">Toggle Publisher</button>
+          </div>
+  
+          <div *ngIf='quote.showName'>
+            <app-qoute-details  [quote]='qoute' (isComplete) = 'deleteEntry($event,i)'></app-qoute-details>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-quote-form (emitQuote)="addQuote($event)"></app-quote-form>
+      </div>
+    </div>
+  
+    <p *ngIf='qoutes.length > 4'>You have too many quotes</p>
+  </div>
+
