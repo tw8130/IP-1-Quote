@@ -4,14 +4,14 @@
   
     <div class="row">
       <div class="col-md-6">
-        <div *ngFor='let quote of qoutes ;let i = index'>
+        <div *ngFor='let quote of quotes ;let i = index'>
           <div>
-            <h4 id={{i}} appHighlight>{{qoute.qoute}}</h4>
+            <h4 id={{i}} appHighlight>{{quote.quote}}</h4>
             <button (click)='togglePublisher(i)' class="btn btn-primary">Toggle Publisher</button>
           </div>
   
           <div *ngIf='quote.showName'>
-            <app-qoute-details  [quote]='qoute' (isComplete) = 'deleteQuote($event,i)'></app-qoute-details>
+            <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
             <button class="btn btn-success" (click)="upvote(i)">Upvote </button>
             <button class="btn btn-success" (click)="downvote(i)">Downvote </button>
           </div>
@@ -22,6 +22,6 @@
       </div> -->
     </div>
   
-    <p *ngIf='qoutes.length > 4'>You have too many quotes</p>
+    <p *ngIf='quotes.length > 4'>You have too many quotes</p>
 </div>
 
