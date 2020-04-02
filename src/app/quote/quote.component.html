@@ -1,29 +1,33 @@
 <div class="container">
-  <div class="jambo">
-    <h1>My Quotes</h1>
-    <hr>
-  
-    <div class="row">
-      <div class="col-md-6">
-        <div *ngFor='let quote of quotes ;let i = index'>
-          <div>
-            <h4 id={{i}} appHighlight>{{quote.quote}}created on {{quote.passedDate|date}}</h4>
-            <button (click)='togglePublisher(i)' class="btn btn-primary">Toggle Publisher</button>
-          </div>
-  
-          <div *ngIf='quote.showName'>
-            <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
-            <button class="btn btn-success" (click)="upvote(i)">Upvote </button>
-            <button class="btn btn-success" (click)="downvote(i)">Downvote </button>
+  <div class="card">
+    <div class="card-title">
+      <h1>My Quotes</h1>
+      <hr>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div *ngFor='let quote of quotes ;let i = index'>
+            <div>
+              <h4 id={{i}} appHighlight>{{quote.quote}} created on {{quote.passedDate|date}}</h4>
+              <button (click)='togglePublisher(i)' class="btn btn-primary">Toggle Publisher</button>
+            </div>
+    
+            <div *ngIf='quote.showName'>
+              <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+              <button class="btn btn-success" (click)="upvote(i)">Upvote </button>
+              <button class="btn btn-success" (click)="downvote(i)">Downvote </button>
+            </div>
           </div>
         </div>
+        <div class="col-md-6">
+          <app-quote-form (emitQuote)="addQuote($event)"></app-quote-form>
+        </div>
       </div>
-      <div class="col-md-6">
-        <app-quote-form (emitQuote)="addQuote($event)"></app-quote-form>
-      </div>
+    
+      <p *ngIf='quotes.length > 4'>You have too many quotes</p>
     </div>
-  
-    <p *ngIf='quotes.length > 4'>You have too many quotes</p>
   </div>
+
 </div>
 
