@@ -5,10 +5,10 @@
         <div class="form-group">
   
             <label for="sub">Submitter</label>
-            <input type="text" required class="form-control" id="sub" [(ngModel)]="newWords.name" name="name" #sub='ngModel' required>
+            <input type="text" required class="form-control" id="sub" [(ngModel)]="newWords.name" name="name" #name='ngModel' required>
   
   <!-- Testing to see if we get any data -->
-            Display {{newQuote.publisher}}
+            Display {{newWords.name}}
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p>Person`s name is required</p>
               </div>
@@ -17,7 +17,7 @@
   
             <label for="author">Author</label>
             <input type="text" required class="form-control" id="author" [(ngModel)]="newWords.author" name="author"  #author='ngModel' required>
-                Display {{newQuote.author}}
+                Display {{newWords.author}}
                 <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                     <p>Author is required</p>
                   </div>
@@ -26,7 +26,7 @@
         <div class="form-group">
   
             <label for="qut">Quote</label>
-            <input type='text' id="qut" [(ngModel)]="newWords.quote" name="quote" #qut='ngModel'required>
+            <input type='text' id="qut" [(ngModel)]="newWords.quote" name="quote" #quote='ngModel'required>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
               </div>
@@ -35,7 +35,7 @@
         <div class="form-group">
   
             <label for="date">Day Entry</label>
-            <input type="date" required class="form-control" id="date" [(ngModel)]="newWords.passedDate" name="passedDate"  #date='ngModel' required>
+            <input type="date" required class="form-control" id="date" [(ngModel)]="newWords.passedDate" name="passedDate"  #passedDate='ngModel' required>
                 <div [hidden]="passedDate.valid || passedDate.pristine" class="alert alert-danger">
                     <p>Date is required</p>
                   </div>
