@@ -5,7 +5,7 @@
         <div class="form-group">
   
             <label for="sub">Submitter</label>
-            <input type="text" required class="form-control" id="sub" [(ngModel)]="newQuote.publisher" name="name" #sub='ngModel' required>
+            <input type="text" required class="form-control" id="sub" [(ngModel)]="newWords.name" name="name" #sub='ngModel' required>
   
   <!-- Testing to see if we get any data -->
             Display {{newQuote.publisher}}
@@ -16,7 +16,7 @@
         <div class="form-group">
   
             <label for="author">Author</label>
-            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"  #author='ngModel' required></textarea>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newWords.author" name="author"  #author='ngModel' required>
                 Display {{newQuote.author}}
                 <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                     <p>Author is required</p>
@@ -26,7 +26,7 @@
         <div class="form-group">
   
             <label for="qut">Quote</label>
-            <input type='text' id="qut" [(ngModel)]="newQuote.quote" name="quote" #qut='ngModel'required>
+            <input type='text' id="qut" [(ngModel)]="newWords.quote" name="quote" #qut='ngModel'required>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
               </div>
@@ -34,11 +34,10 @@
         </div>
         <div class="form-group">
   
-            <label for="author">Author</label>
-            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"  #author='ngModel' required></textarea>
-                Display {{newQuote.author}}
-                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                    <p>Author is required</p>
+            <label for="date">Day Entry</label>
+            <input type="date" required class="form-control" id="date" [(ngModel)]="newWords.passedDate" name="passedDate"  #date='ngModel' required>
+                <div [hidden]="passedDate.valid || passedDate.pristine" class="alert alert-danger">
+                    <p>Date is required</p>
                   </div>
   
         </div>
