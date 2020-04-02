@@ -12,10 +12,10 @@ export class QuoteComponent implements OnInit {
   }
 
   quotes:Quote[]=[
-    new Quote (1,'MKL','Doug Conant','To win the marketplace you must first win the workplace'),
-    new Quote (2,'Max','Richard Branson','Business opportunities are like buses there`s always another one coming'),
-    new Quote (3,'Lina','Mae West','You only live once but if you do it right,once is enough'),
-    new Quote (4,'Elijah','Stephen King','Get busy living or get busy dying')
+    new Quote (1,'MKL','Doug Conant','To win the marketplace you must first win the workplace',new Date(2020,2,15)),
+    new Quote (2,'Max','Richard Branson','Business opportunities are like buses there`s always another one coming',new Date(2019,6,2)),
+    new Quote (3,'Lina','Mae West','You only live once but if you do it right,once is enough',new Date(2020,4,20)),
+    new Quote (4,'Elijah','Stephen King','Get busy living or get busy dying',new Date(2020,3,10))
   ]
 
   deleteQuote(isComplete, index) {
