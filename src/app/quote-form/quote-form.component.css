@@ -1,7 +1,4 @@
-div.card {
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F155303887184236167%2F&psig=AOvVaw0Lai8hxXec3J9TuBtFdRP5&ust=1585907671214000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLihtc28yegCFQAAAAAdAAAAABAo);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+div.card-body { background-image: url(/src/assets/891923c45e194f0b2e3de8fff9a5e578.jpg) !important}
+
 
 
