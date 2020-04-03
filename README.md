@@ -12,6 +12,15 @@ You:
 Here is my link to my project.
 <a href="https://tw8130.github.io/IP-1-Quote/">View</a>
 
+# Behaviour Driven Development(BDD)
+Input                      |       Output
+--------------------------------------------------------------------------------------	               
+
+User clicks Submit Quote  |	Quote form displays with input fields for Author & others 
+User Clicks Delete	      |  The quote is deleted from view
+User clicks Upvote	      |  upvote is incremented value by 1 on each click
+User clicks Downvote	  |  downvote is decremented value by 1 on each click
+
 ## KNOWN BUGS:
 Any bugs noted you can email me for clarification.
 ## TECHNOLOGIES USED:
