@@ -38,6 +38,24 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(chosenQuote)
   }
 
+  firstNum:number
+  postNum:number
+  counter:number
+
+  highestUpvote(){
+    this.firstNum=0
+    this.postNum=0
+
+
+    for(this.counter=0 ; this.counter<this.quotes.length; this.counter++){
+      this.postNum=this.quotes[this.counter].upvotes;
+      if(this.postNum>this.firstNum){this.firstNum=this.postNum}
+    }
+    return this.firstNum
+  }
+
+
+
 
   constructor() { }
 
