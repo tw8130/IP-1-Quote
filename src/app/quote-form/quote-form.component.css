@@ -1,4 +1,8 @@
-div.card-body { background-image: url(/src/assets/891923c45e194f0b2e3de8fff9a5e578.jpg) !important}
+.card{
+    background-color: gold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
 
 
 
