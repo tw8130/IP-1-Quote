@@ -9,9 +9,14 @@
         <div class="col-md-6">
           <div *ngFor='let quote of quotes ;let i = index'>
             <div>
-              <h4 id={{i}} appHighlight>{{quote.quote}} created on {{quote.passedDate|date}}</h4>
+              <h4 id={{i}} >{{quote.quote}} created on {{quote.passedDate|date}}</h4>
+              <p class="galo" *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0" appHighLight>{{quote.quote}}</p>
+              <p class="galo" *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.qoute}}</p>
               <button (click)='togglePublisher(i)' class="btn btn-primary">Toggle Publisher</button>
             </div>
+
+            <!-- <p class="galo" appHighLight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.quote}}</p>
+            <p class="galo" *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.qoute}}</p> -->
     
             <div *ngIf='quote.showName'>
               <app-quote-details  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
